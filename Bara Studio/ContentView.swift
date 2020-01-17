@@ -8,9 +8,35 @@
 
 import SwiftUI
 
+struct Location {
+    static let allLocations = [
+        "New York",
+        "London",
+        "Tokyo",
+        "Berlin",
+        "Paris"
+    ]
+}
+
 struct ContentView: View {
+    @State private var firstname = ""
+    @State private var lastname = ""
+    @State private var location = ""
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            Form {
+               TextField("Firstname",
+                          text: $firstname)
+                TextField("Lastname",
+                          text: $lastname)
+                Picker(selection: $location,
+                       label: Text("Location")) {
+                        ForEach(Location.allLocations, id: \.self) { location in
+                            Text(location).tag(location)
+                        }
+                }
+            }.navigationBarTitle(Text("Profile"))
+        }
     }
 }
 

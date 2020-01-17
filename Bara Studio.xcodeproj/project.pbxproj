@@ -51,6 +51,7 @@
 		C8109CC723D1961B00CF3A2A /* Bara StudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bara StudioUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8109CCB23D1961B00CF3A2A /* Bara_StudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bara_StudioUITests.swift; sourceTree = "<group>"; };
 		C8109CCD23D1961B00CF3A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8109CD923D1963000CF3A2A /* Bara Studio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bara Studio.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		C8109CA523D1961600CF3A2A /* Bara Studio */ = {
 			isa = PBXGroup;
 			children = (
+				C8109CD923D1963000CF3A2A /* Bara Studio.entitlements */,
 				C8109CA623D1961600CF3A2A /* AppDelegate.swift */,
 				C8109CA823D1961600CF3A2A /* SceneDelegate.swift */,
 				C8109CAD23D1961600CF3A2A /* ContentView.swift */,
@@ -438,9 +440,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bara Studio/Bara Studio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bara Studio/Preview Content\"";
 				DEVELOPMENT_TEAM = R2C7Q9VC6C;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bara Studio/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,6 +454,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.barajs.Bara-Studio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,9 +464,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bara Studio/Bara Studio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bara Studio/Preview Content\"";
 				DEVELOPMENT_TEAM = R2C7Q9VC6C;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bara Studio/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,6 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.barajs.Bara-Studio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
